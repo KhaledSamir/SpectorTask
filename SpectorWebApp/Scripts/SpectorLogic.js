@@ -1,20 +1,30 @@
 ﻿
 
+
+
 function displayCreateP() {
     $('#CreateP').toggle(1000).show();
 }
 
+String.prototype.isEmpty = function () {
+    return (this.length === 0 || !this.trim());
+}
 
+function log(message) {
+    console.dir(message);
+}
 
 var Methods = {
+
+    rmbtn: {},
 
     addNewMessage: function () {
 
         var Message = $('#MsgText').val();
         
-        var removeBtn = '<a href="#" onclick="Methods.deleteMessage(this)" id="rmvBtn">Remove</a>';
+        var removeBtn = '<a href="#" onclick="Methods.showModel(this);" id="rmvBtn">Remove</a>';
 
-        if (Message === "") {
+        if (String(Message).isEmpty()) {
             $('#InvSpan').show();
             return;
         }
@@ -41,8 +51,9 @@ var Methods = {
         });
     },
 
-    deleteMessage: function (btn) {
+    deleteMessage: function () {
 
+        var btn = this.rmbtn;
         //$(btn).parents('tr').remove();
         var Id = parseInt($(btn).parentsUntil('tr').parent('tr').find('#lblID').text());
        
@@ -59,13 +70,16 @@ var Methods = {
         }).success(function (result) {
             if (result.d === true) {
                 $(btn).parentsUntil('tr').parent('tr').remove();
+                $('#myModal').modal('hide');
             }
         }).error(function (err) {
             log(err)
         });
+    },
+
+    showModel: function (btn) {
+        $('#myModal').modal('show');
+        this.rmbtn = btn;
     }
 };
 
-function log(message) {
-    console.dir(message);
-}

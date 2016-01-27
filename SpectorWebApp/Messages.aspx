@@ -6,8 +6,9 @@
 <head runat="server">
     <link href="Content/Site.css" rel="stylesheet" />
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
-    <script src="Scripts/modernizr-2.6.2.js"></script>
     <script src="Scripts/jquery-1.10.2.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/modernizr-2.6.2.js"></script>
     <script type="text/javascript" src="Scripts/SpectorLogic.js"></script>
     <title>Spector Testing Task !</title>
 </head>
@@ -34,12 +35,12 @@
         <div class="container body-content">
             <form id="form1" runat="server">
                 <p>
-                    <input type="button"  class="btn" onclick="displayCreateP()" value="Add new message" />
+                    <input type="button" class="btn" onclick="displayCreateP()" value="Add new message" />
                 </p>
                 <p id="CreateP" style="display: none;">
                     Message :
                 <input type="text" id="MsgText" />
-                    <input type="button" value="Add" class="btn" onclick="Methods.addNewMessage();" />
+                    <input type="button" value="Add" class="btn" onclick='Methods.addNewMessage();' />
                     <span class="alert-warning" style="color: red; display: none;" id="InvSpan">Please add value!</span>
                 </p>
                 <asp:GridView ID="MsgsGrid" ClientIDMode="Static" runat="server" DataMember="ID" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Width="404px" Style="text-align: left">
@@ -54,7 +55,7 @@
                         <asp:BoundField DataField="Message" HeaderText="Message" />
                         <asp:TemplateField HeaderText="Removing">
                             <ItemTemplate>
-                                <a href="#" onclick="Methods.deleteMessage(this)" id="rmvBtn">Remove</a>
+                                <a href="#" onclick="Methods.showModel(this);" id="rmvBtn">Remove</a>
                             </ItemTemplate>
                         </asp:TemplateField>
                     </Columns>
@@ -71,6 +72,27 @@
                 </asp:GridView>
             </form>
         </div>
+    </div>
+
+    <div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Warning!!</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to delete this message?&hellip;</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                    <button type="button" onclick="Methods.deleteMessage();" class="btn btn-primary">Yes</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
     </div>
 </body>
 </html>
