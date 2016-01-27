@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="SpectorWebApp.SpectorWCF" CodeBehind="SpectorWCF.svc.cs" %>

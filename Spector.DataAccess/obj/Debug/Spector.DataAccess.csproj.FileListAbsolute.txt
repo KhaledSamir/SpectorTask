@@ -1,0 +1,10 @@
+C:\Users\Khaled\Desktop\SpectorApp\Spector.DataAccess\bin\Debug\Spector.DataAccess.dll.config
+C:\Users\Khaled\Desktop\SpectorApp\Spector.DataAccess\bin\Debug\Spector.DataAccess.dll
+C:\Users\Khaled\Desktop\SpectorApp\Spector.DataAccess\bin\Debug\Spector.DataAccess.pdb
+C:\Users\Khaled\Desktop\SpectorApp\Spector.DataAccess\bin\Debug\EntityFramework.dll
+C:\Users\Khaled\Desktop\SpectorApp\Spector.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Khaled\Desktop\SpectorApp\Spector.DataAccess\bin\Debug\EntityFramework.xml
+C:\Users\Khaled\Desktop\SpectorApp\Spector.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Khaled\Desktop\SpectorApp\Spector.DataAccess\obj\Debug\Spector.DataAccess.dll
+C:\Users\Khaled\Desktop\SpectorApp\Spector.DataAccess\obj\Debug\Spector.DataAccess.pdb
+C:\Users\Khaled\Desktop\SpectorApp\Spector.DataAccess\obj\Debug\Spector.DataAccess.csprojResolveAssemblyReference.cache

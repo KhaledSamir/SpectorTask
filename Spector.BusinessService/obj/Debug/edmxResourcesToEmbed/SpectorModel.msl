@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SpectorDBModelStoreContainer" CdmEntityContainer="SpectorDBEntities">
+    <EntitySetMapping Name="SpecMessages">
+      <EntityTypeMapping TypeName="SpectorDBModel.SpecMessage">
+        <MappingFragment StoreEntitySet="SpecMessage">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
