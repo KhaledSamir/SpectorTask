@@ -51,10 +51,7 @@ namespace Spector.BusinessService
 
         private bool SaveChanges()
         {
-            if (db.SaveChanges() > 0)
-                return true;
-
-            return false;
+            return db.SaveChanges() > 0;
         }
 
         public SpecMessage FindMessage(int MsgId)
